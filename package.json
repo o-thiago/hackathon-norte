@@ -1,0 +1,16 @@
+{
+  "name": "sentinela-das-aguas",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "bun --filter @sentinela/api dev",
+    "dev:web": "bun --filter @sentinela/web dev",
+    "build": "bun --filter @sentinela/web build",
+    "typecheck": "bun --filter '*' typecheck",
+    "db:push": "bun --filter @sentinela/api db:push",
+    "db:seed": "bun --filter @sentinela/api db:seed"
+  }
+}
+
