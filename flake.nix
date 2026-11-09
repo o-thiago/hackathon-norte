@@ -95,7 +95,7 @@
             buildPhase = "true";
             installPhase = ''
               mkdir -p $out/lib
-              cp -r apps package.json $out/lib/ 2>/dev/null || true
+              cp -r api web package.json $out/lib/ 2>/dev/null || true
               [ -f bun.lock ] && cp bun.lock $out/lib/ || true
             '';
           };

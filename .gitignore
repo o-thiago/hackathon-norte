@@ -12,7 +12,6 @@ out/
 .env
 .env.local
 .env.*.local
-!.env.example
 
 # Logs
 logs/
@@ -45,4 +44,3 @@ result-*
 # AI Agents and Skills
 .agents/
 skills-lock.json
-

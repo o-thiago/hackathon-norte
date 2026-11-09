@@ -35,10 +35,10 @@ O sistema cruza dados telemétricos e geoespaciais com a malha escolar e rotas d
 
 ## 3. Arquitetura Técnica & Stack
 
-- **Monorepo:** Bun Workspaces (`package.json`, `apps/api`, `apps/web`)
-- **Backend (`apps/api`):** Hono v4, `@hono/zod-validator`, Zod, Drizzle ORM, driver `postgres`
+- **Monorepo:** Bun Workspaces (`package.json`, `api`, `web`)
+- **Backend (`api`):** Hono v4, `@hono/zod-validator`, Zod, Drizzle ORM, driver `postgres`
 - **Banco de Dados:** PostgreSQL 16 (configurável via `DATABASE_URL`)
-- **Frontend (`apps/web`):** Vite 8, React 19, TypeScript strict, TanStack Query v5, Tailwind CSS v4, Lucide React, Leaflet & React-Leaflet
+- **Frontend (`web`):** Vite 8, React 19, TypeScript strict, TanStack Query v5, Tailwind CSS v4, Lucide React, Leaflet & React-Leaflet
 - **100% Autocontido:** Nenhuma chamada externa a APIs pagas ou com autenticação (telemetria servida de seed local determinístico).
 
 ---
@@ -60,10 +60,15 @@ _(Para encerrar os serviços quando necessário: `podman compose down`)_
 
 ### 2. Configurar Variáveis de Ambiente
 
-Copie o arquivo de exemplo:
+Configure as variáveis de ambiente no arquivo `.env` na raiz do projeto (valores padrão pré-configurados para desenvolvimento local):
 
-```bash
-cp -n .env.example .env
+```env
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=hackathon_db
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/hackathon_db
+PORT=3000
+VITE_API_URL=http://localhost:3000
 ```
 
 ### 3. Aplicar Migrações e Executar o Seed Determinístico

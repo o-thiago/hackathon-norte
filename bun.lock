@@ -5,7 +5,7 @@
     "": {
       "name": "sentinela-das-aguas",
     },
-    "apps/api": {
+    "api": {
       "name": "@sentinela/api",
       "dependencies": {
         "@hono/zod-validator": "^0.9.1",
@@ -20,7 +20,7 @@
         "typescript": "^7.0.2",
       },
     },
-    "apps/web": {
+    "web": {
       "name": "@sentinela/web",
       "dependencies": {
         "@fontsource-variable/public-sans": "^5.3.0",
@@ -152,9 +152,9 @@
 
     "@rolldown/pluginutils": ["@rolldown/pluginutils@1.0.1", "", {}, "sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw=="],
 
-    "@sentinela/api": ["@sentinela/api@workspace:apps/api"],
+    "@sentinela/api": ["@sentinela/api@workspace:api"],
 
-    "@sentinela/web": ["@sentinela/web@workspace:apps/web"],
+    "@sentinela/web": ["@sentinela/web@workspace:web"],
 
     "@tailwindcss/node": ["@tailwindcss/node@4.3.4", "", { "dependencies": { "@jridgewell/remapping": "^2.3.5", "enhanced-resolve": "^5.24.5", "jiti": "^2.7.0", "lightningcss": "1.33.0", "magic-string": "^1.1.0", "source-map-js": "^1.2.1", "tailwindcss": "4.3.4" } }, "sha512-b7QK/QG04v3j04NbpG82XLCedRyulnkuwUDwRa9oK/ypnJIzMapz2Wg+0TltVczjUzDaJJHIa1+jj9aMUOFMTQ=="],
 
